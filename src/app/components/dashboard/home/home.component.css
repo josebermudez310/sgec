@@ -1,0 +1,88 @@
+
+.card-title {
+    font-size: 2em;
+    color: #d9ebe9;
+    text-align: center;
+    padding: 20px;
+}
+/* Estilo del contenedor de tarjetas */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center; /* Centra las tarjetas */
+    margin-left: 190px; /* Ajusta según el ancho de tu menú */
+}
+
+
+/* Estilo de las tarjetas */
+.card {
+    background-color: #2c2f33;
+    color: #d9ebe9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: calc(33.333% - 20px); /* Tres tarjetas por fila en pantallas grandes */
+    transition: transform 0.2s ease-in-out;
+    text-align: center; /* Centrar el contenido de las tarjetas */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para la imagen en las tarjetas */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior de la imagen */
+    margin-bottom: 15px;
+}
+
+/* Títulos y descripción de las tarjetas */
+.card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+
+.card-button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 15px;
+    background-color: #3b4a5a;
+    color: #d9ebe9;
+    border: none;
+    border-radius: 30px; /* Botón redondeado */
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.card-button:hover {
+    background-color: #4d5e72;
+    transform: scale(1.05); /* Ligeramente más grande al pasar el mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Efecto de sombra */
+}
+
+/* Responsividad para pantallas medianas y pequeñas */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* Dos tarjetas por fila en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Una tarjeta por fila en pantallas pequeñas */
+    }
+}
