@@ -1,0 +1,93 @@
+<div class="user-list">
+    <div class="user-item">
+        <img src="imagen.jpg" alt="Foto de Usuario" class="user-photo"
+            (click)="openModal('Usuario 1', '12345678', 'usuario1@ejemplo.com', 'imagen.jpg')">
+        <span class="user-name"
+            (click)="openModal('Usuario 1', '12345678', 'usuario1@ejemplo.com', 'imagen.jpg')">Usuario 1</span>
+        <div class="user-actions">
+            <div class="dropdown">
+                <button class="dropbtn">Asignar Rol</button>
+                <div class="dropdown-content">
+                    <a (click)="assignRole('Usuario 1', 'Admin')">Administrador</a>
+                    <a (click)="assignRole('Usuario 1', 'Editor')">Moderador</a>
+                    <a (click)="assignRole('Usuario 1', 'Viewer')">Visitante</a>
+                    <a (click)="assignRole('Usuario 1', 'Viewer')">Seguridad</a>
+                </div>
+            </div>
+            <button class="status-btn" (click)="toggleStatus($event.target)">Activo</button>
+        </div>
+    </div>
+
+
+    <div class="user-item">
+        <img src="imagen.jpg" alt="Foto de Usuario" class="user-photo"
+            (click)="openModal('Usuario 1', '12345678', 'usuario1@ejemplo.com', 'imagen.jpg')">
+        <span class="user-name"
+            (click)="openModal('Usuario 1', '12345678', 'usuario1@ejemplo.com', 'imagen.jpg')">Usuario 1</span>
+        <div class="user-actions">
+            <div class="dropdown">
+                <button class="dropbtn">Asignar Rol</button>
+                <div class="dropdown-content">
+                    <a (click)="assignRole('Usuario 1', 'Admin')">Administrador</a>
+                    <a (click)="assignRole('Usuario 1', 'Editor')">Moderador</a>
+                    <a (click)="assignRole('Usuario 1', 'Viewer')">Visitante</a>
+                    <a (click)="assignRole('Usuario 1', 'Viewer')">Seguridad</a>
+                </div>
+            </div>
+            <button class="status-btn" (click)="toggleStatus($event.target)">Activo</button>
+        </div>
+    </div>
+
+
+    <div class="user-item"
+        (click)="openModal('Usuario 3', '87654321', 'usuario3@ejemplo.com', 'https://via.placeholder.com/80')">
+        <img src="imagen.jpg" alt="Foto de Usuario" class="user-photo">
+        <span class="user-name">Usuario 3</span>
+        <div class="user-actions">
+            <div class="dropdown">
+                <button class="dropbtn">Asignar Rol</button>
+                <div class="dropdown-content">
+                    <a (click)="assignRole('Usuario 1', 'Admin')">Administrador</a>
+                    <a (click)="assignRole('Usuario 1', 'Editor')">Moderador</a>
+                    <a (click)="assignRole('Usuario 1', 'Viewer')">Visitante</a>
+                    <a (click)="assignRole('Usuario 1', 'Viewer')">Seguridad</a>
+                </div>
+            </div>
+            <button class="status-btn" (click)="toggleStatus($event.target)">Activo</button>
+        </div>
+    </div>
+
+    <div class="user-item"
+        (click)="openModal('Usuario 4', '87654321', 'usuario4@ejemplo.com', 'https://via.placeholder.com/80')">
+        <img src="imagen.jpg" alt="Foto de Usuario" class="user-photo">
+        <span class="user-name">Usuario 4</span>
+        <div class="user-actions">
+            <div class="dropdown">
+                <button class="dropbtn">Asignar Rol</button>
+                <div class="dropdown-content">
+                    <a (click)="assignRole('Usuario 1', 'Admin')">Administrador</a>
+                    <a (click)="assignRole('Usuario 1', 'Editor')">Moderador</a>
+                    <a (click)="assignRole('Usuario 1', 'Viewer')">Visitante</a>
+                    <a (click)="assignRole('Usuario 1', 'Viewer')">Seguridad</a>
+                </div>
+            </div>
+            <button class="status-btn" (click)="toggleStatus($event.target)">Activo</button>
+        </div>
+    </div>
+
+</div>
+
+<div id="userModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" (click)="closeModal()">&times;</span>
+        <div class="modal-header">
+            <img id="modalImage" class="modal-photo" src="" alt="Foto del Usuario">
+        </div>
+        <h2>Detalles del Usuario</h2>
+        <p><strong>Nombre:</strong> <span id="modalName"></span></p>
+        <p><strong>Cédula:</strong> <span id="modalId"></span></p>
+        <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+        <p><strong>Rol:</strong> <span id="Administrador"></span></p>
+
+    </div>
+</div>

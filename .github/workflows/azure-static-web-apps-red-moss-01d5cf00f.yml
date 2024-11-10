@@ -4,10 +4,12 @@ on:
   push:
     branches:
       - master
+      - develop
   pull_request:
-    types: [closed]
+    types: [opened,synchronize,closed]
     branches:
       - master
+      - develop
 
 jobs:
   build_and_deploy_job:
@@ -32,6 +34,7 @@ jobs:
           api_location: "" # Api source code path - optional
           output_location: "dist/sgec/browser" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
+          production_branch: "master"
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
