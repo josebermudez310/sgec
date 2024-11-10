@@ -1,0 +1,252 @@
+.principal {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.perfil-container {
+    background-color: #23242a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos de la imagen de perfil */
+.perfil-imagen {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Estilos del nombre */
+.nombre {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Estilos del formulario */
+.perfil-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos de los campos del formulario */
+.perfil-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.perfil-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+/* Estilo para la sección de botones */
+.acciones {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.acciones button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 48%;
+}
+
+.btn-cambiar-contraseña {
+    background-color: #00f130;
+    color: rgb(27, 27, 27);
+}
+
+.btn-cambiar-contraseña:hover {
+    background-color: #2e2e2e;
+}
+
+.btn-editar-perfil {
+    background-color: #efb120;
+    color: black;
+}
+
+.btn-editar-perfil:hover {
+    background-color: #624605;
+}
+
+/* Estilo para la sección de implementos */
+.implementos {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.implementos h2 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.imagenes-implementos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.imagenes-implementos img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Color #23242a */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 80%;
+}
+
+/* Estilo para el icono de volver en la parte superior del modal */
+.modal-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icono-volver {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icono-volver:hover {
+    transform: scale(1.2);
+}
+
+
+
+.icono-volver-principal {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 100;
+}
+
+.icono-volver-principal:hover {
+    transform: scale(1.2);
+}
+
+
+
+/* Estilo para el modal de cambiar contraseña */
+#modal-cambiar-contraseña {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(35, 35, 35, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: rgb(16, 13, 13);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    background-color: #00a94f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #004621;
+}
+
+/* Botón de cerrar modal */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close:hover {
+    color: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
