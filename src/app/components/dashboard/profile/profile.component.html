@@ -1,0 +1,58 @@
+<div class="principal">
+    <div class="perfil-container">
+        <div class="perfil-header">
+            <img src="imagen.jpg" alt="Foto de perfil" class="perfil-imagen">
+            <h1 class="nombre">Juan Pérez</h1>
+        </div>
+    
+        <form class="perfil-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" value="Ana Pérez" readonly>
+    
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" name="cedula" value="1234567890" readonly>
+    
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" name="contraseña" value="******" readonly>
+        </form>
+    
+        <div class="acciones">
+            <button type="button" class="btn-cambiar-contraseña">Cambiar Contraseña</button>
+            <button type="button" class="btn-editar-perfil">Editar Perfil</button>
+        </div>
+    
+        <div id="modal-cambiar-contraseña" class="modal">
+            <div class="modal-content">
+                <span class="close" (click)="closePasswordModal()">&times;</span>
+                <h2>Cambiar Contraseña</h2>
+                <form>
+                    <label for="nueva-contraseña">Nueva Contraseña:</label>
+                    <input type="password" id="nueva-contraseña" name="nueva-contraseña">
+    
+                    <label for="codigo">Código Enviado al Correo:</label>
+                    <input type="text" id="codigo" name="codigo">
+    
+                    <button type="button" (click)="saveNewPassword()">Guardar</button>
+                </form>
+            </div>
+        </div>
+    
+        <div class="implementos">
+            <h2>Implementos</h2>
+            <div class="imagenes-implementos">
+                <img src="device.jpg" alt="Implemento 1" class="implemento" (click)="mostrarImagen($event.target)">
+                <img src="device.jpg" alt="Implemento 2" class="implemento" (click)="mostrarImagen($event.target)">
+                <img src="device.jpg" alt="Implemento 3" class="implemento" (click)="mostrarImagen($event.target)">
+            </div>
+        </div>
+    
+        <!-- Modal para mostrar imagen ampliada -->
+        <div id="modal" class="modal" (click)="cerrarModal()">
+            <div class="modal-header">
+                <!-- Icono de "volver" con FontAwesome -->
+                <i class="fas fa-arrow-left icono-volver" (click)="cerrarModal()"></i>
+            </div>
+            <img id="imagen-ampliada" src="" alt="Imagen Ampliada">
+        </div>
+    </div>
+</div>
