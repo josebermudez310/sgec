@@ -28,8 +28,8 @@
         </div>
 
         <div class="button-group">
-            <button type="submit" form="registerForm" class="submit-button">Registrarse</button>
-            <button type="button" class="boton-inicio-sesion" onclick="window.location.href='/login'">Iniciar
+            <button type="submit" (click)="register()" form="registerForm" class="submit-button">Registrarse</button>
+            <button type="button" class="boton-inicio-sesion" routerLink="/login">Iniciar
                 Sesión</button>
         </div>
     </div>

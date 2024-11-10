@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ConfigurationsComponent } from './configurations/configurations.component';
 import { GraphicComponent } from './graphic/graphic.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 export const routes: Routes = [
     {
@@ -14,6 +15,7 @@ export const routes: Routes = [
             { path: 'profile', component: ProfileComponent },
             { path: 'configurations', component: ConfigurationsComponent },
             { path: 'graphic', component: GraphicComponent },
+            { path: 'calendar', component: CalendarComponent },
             { path: '**', redirectTo: 'home', pathMatch: 'full' }
         ]
     }

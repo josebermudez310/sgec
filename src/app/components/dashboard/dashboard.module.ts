@@ -14,7 +14,8 @@ import { HomeComponent } from './home/home.component';
     RouterModule.forChild(routes),
     RouterOutlet,
     DashboardComponent,
-    HomeComponent
+    HomeComponent,
+    RouterModule
   ]
 })
 export class DashboardModule { }
