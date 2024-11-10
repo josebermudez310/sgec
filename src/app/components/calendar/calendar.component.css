@@ -1,0 +1,104 @@
+
+/*contenedor del calendario */
+.full-calendar-container {
+  max-width: 800px; 
+  margin: 0 auto;
+  background-color: #23242a;
+  padding: 15px; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  color: #e0e0e0;
+}
+
+/* Ajustes en el calendario */
+.full-calendar {
+  font-size: 1.1rem;
+  color: #e0e0e0; /* Texto claro */
+}
+
+/* Encabezado del calendario */
+h2 {
+  font-weight: bold;
+  color: #ffffff; 
+}
+
+/* Estilo de la modal */
+.modal-content {
+  background-color: #2c2d33;
+  border-radius: 8px;
+  color: #e0e0e0;
+}
+
+/* Título de la modal */
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff; 
+}
+
+/* Estilo de los campos de entrada */
+.modal-body .form-control {
+  background-color: #3a3b41;
+  color: #e0e0e0; 
+  border: 1px solid #4a4b51;
+}
+
+.modal-body .form-control::placeholder {
+  color: #b0b0b0; 
+}
+
+/* Botones en la modal */
+.modal-body .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.modal-body .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.modal-body .btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #e0e0e0;
+}
+
+.modal-body .btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #5a6268;
+}
+
+/* Margen entre los botones */
+.d-flex .btn {
+  margin-top: 10px;
+}
+
+/* Ajuste de color del calendario */
+.fc-toolbar.fc-header-toolbar {
+  color: #e0e0e0; 
+}
+
+.fc .fc-daygrid-day {
+  background-color: #2c2d33; 
+  border-color: #4a4b51;
+}
+
+.fc .fc-daygrid-day:hover {
+  background-color: #3a3b41; 
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: #383940; 
+}
+
+.fc-event {
+  background-color: #007bff; 
+  border: 1px solid #0056b3; 
+  color: #ffffff;
+}
+
+.fc-event:hover {
+  background-color: #0056b3; 
+  border-color: #003f7f;
+}

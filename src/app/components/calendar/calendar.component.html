@@ -1,0 +1,86 @@
+<div class="container mt-5 full-calendar-container">
+    <h2 class="text-center mb-4">Calendario de Eventos</h2>
+    <full-calendar [options]="calendarOptions"></full-calendar>
+  </div>
+  
+  <!-- Modal para agregar eventos -->
+  <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="eventModalLabel">Agregar Evento</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form (ngSubmit)="addEvent()">
+            <div class="mb-3">
+              <label for="title" class="form-label">Título del Evento</label>
+              <input type="text" id="title" class="form-control" [(ngModel)]="newEvent.title" name="title" required>
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Descripción</label>
+              <textarea id="description" class="form-control" [(ngModel)]="newEvent.description" name="description" rows="4" required></textarea>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="date" class="form-label">Fecha del Evento</label>
+                <input type="date" id="date" class="form-control" [(ngModel)]="newEvent.date" name="date" required>
+              </div>
+              <div class="col-md-6">
+                <label for="time" class="form-label">Hora del Evento</label>
+                <input type="time" id="time" class="form-control" [(ngModel)]="newEvent.time" name="time">
+              </div>
+            </div>
+  
+            <!-- Nueva sección de Información Personal -->
+            <div class="mb-3">
+              <h5>Información Personal</h5>
+            </div>
+            <div class="mb-3">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="fullName" class="form-label">Nombre Completo</label>
+                  <input type="text" id="fullName" class="form-control" [(ngModel)]="newEvent.fullName" name="fullName" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="idNumber" class="form-label">Cédula</label>
+                  <input type="text" id="idNumber" class="form-control" [(ngModel)]="newEvent.idNumber" name="idNumber" required>
+                </div>
+              </div>
+            </div>
+            
+  
+            <div class="d-flex justify-content-end">
+              <button type="submit" class="btn btn-primary me-2">Agregar Evento</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+<!-- Modal para mostrar detalles del evento -->
+<div class="modal fade" id="eventDetailsModal" tabindex="-1" aria-labelledby="eventDetailsModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="eventDetailsModalLabel">Detalles del Evento</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Título:</strong> {{ selectedEvent.title }}</p>
+        <p><strong>Descripción:</strong> {{ selectedEvent.description }}</p>
+        <p><strong>Fecha y Hora:</strong> {{ selectedEvent.start | date: 'fullDate' }} {{ selectedEvent.start | date: 'shortTime' }}</p>
+        <p><strong>Nombre Completo:</strong> {{ selectedEvent.fullName }}</p>
+        <p><strong>Cédula:</strong> {{ selectedEvent.idNumber }}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  

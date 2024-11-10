@@ -1,12 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
-body {
+/* Ajustes en el CSS Global para ocupar todo el espacio sin centrado */
+body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: #23242a;
-}
+  }
+  
