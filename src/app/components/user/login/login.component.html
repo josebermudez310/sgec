@@ -3,7 +3,7 @@
         <img id="imagen-login" src="login.png" alt="imagen login">
     </div>
     <div class="login">
-        <form>
+        <form (ngSubmit)="login()">
             <h2>Inicio Sesión</h2>
             <div class="inputLogin">
                 <input type="text" required="required">
@@ -17,7 +17,7 @@
             </div>
             <div class="links">
                 <a href="#">Olvidó su contraseña</a>
-                <a href="#">Registrarse</a>
+                <a routerLink="/register">Registrarse</a>
             </div>
             <input type="submit" value="Login">
         </form>
