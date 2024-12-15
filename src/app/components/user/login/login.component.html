@@ -3,15 +3,15 @@
         <img id="imagen-login" src="login.png" alt="imagen login">
     </div>
     <div class="login">
-        <form (ngSubmit)="login()">
+        <form [formGroup]="loginForm" (ngSubmit)="submit()">
             <h2>Inicio Sesión</h2>
             <div class="inputLogin">
-                <input type="text" required="required">
+                <input type="text" formControlName="email" required="required">
                 <span>Usuario</span>
                 <i></i>
             </div>
             <div class="inputLogin">
-                <input type="password" required="required">
+                <input type="password" formControlName="password" required="required">
                 <span>Contraseña</span>
                 <i></i>
             </div>

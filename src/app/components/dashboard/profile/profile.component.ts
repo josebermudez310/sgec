@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilsService } from '../../../services/utils.service';
 
 @Component({
   selector: 'app-profile',
@@ -8,6 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './profile.component.css'
 })
 export class ProfileComponent implements OnInit {
+
+  public user: any;
+  constructor(
+    private utilsService: UtilsService,
+  ) { }
+
   ngOnInit(): void {
     // Initialize modal elements
     const modalCambiarContraseña = document.getElementById("modal-cambiar-contraseña");
@@ -16,6 +23,16 @@ export class ProfileComponent implements OnInit {
     document.querySelector(".btn-cambiar-contraseña").addEventListener('click', () => {
       modalCambiarContraseña.style.display = "flex";
     });
+
+    this.utilsService.me().subscribe(
+      (response) => {
+        console.log(response);
+        this.user = response;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
   mostrarImagen(event): void {

@@ -7,10 +7,10 @@
     
         <form class="perfil-form">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" value="Ana Pérez" readonly>
+            <input type="text" id="nombre" name="nombre" [value]="user.name" readonly>
     
             <label for="cedula">Cédula:</label>
-            <input type="text" id="cedula" name="cedula" value="1234567890" readonly>
+            <input type="text" id="cedula" name="cedula" [value]="user.cedula" readonly>
     
             <label for="contraseña">Contraseña:</label>
             <input type="password" id="contraseña" name="contraseña" value="******" readonly>

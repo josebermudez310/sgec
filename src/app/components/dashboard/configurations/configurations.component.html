@@ -1,80 +1,22 @@
 <div class="user-list">
-    <div class="user-item">
+    <div class="user-item"  *ngFor="let user of users">
         <img src="imagen.jpg" alt="Foto de Usuario" class="user-photo"
-            (click)="openModal('Usuario 1', '12345678', 'usuario1@ejemplo.com', 'imagen.jpg')">
+            (click)="openModal(user.name, user.cedula, user.email, 'imagen.jpg', user.rol)">
         <span class="user-name"
-            (click)="openModal('Usuario 1', '12345678', 'usuario1@ejemplo.com', 'imagen.jpg')">Usuario 1</span>
+            (click)="openModal(user.name, user.cedula, user.email, 'imagen.jpg', user.rol)">{{ user.name }}</span>
         <div class="user-actions">
             <div class="dropdown">
                 <button class="dropbtn">Asignar Rol</button>
                 <div class="dropdown-content">
-                    <a (click)="assignRole('Usuario 1', 'Admin')">Administrador</a>
-                    <a (click)="assignRole('Usuario 1', 'Editor')">Moderador</a>
-                    <a (click)="assignRole('Usuario 1', 'Viewer')">Visitante</a>
-                    <a (click)="assignRole('Usuario 1', 'Viewer')">Seguridad</a>
+                    <a (click)="assignRole(user.id, 'Administrador')">Administrador</a>
+                    <a (click)="assignRole(user.id, 'Moderador')">Moderador</a>
+                    <a (click)="assignRole(user.id, 'Visitante')">Visitante</a>
+                    <a (click)="assignRole(user.id, 'Seguridad')">Seguridad</a>
                 </div>
             </div>
-            <button class="status-btn" (click)="toggleStatus($event.target)">Activo</button>
+            <button class="status-btn" (click)="toggleStatus($event.target, user.id)">Activo</button>
         </div>
     </div>
-
-
-    <div class="user-item">
-        <img src="imagen.jpg" alt="Foto de Usuario" class="user-photo"
-            (click)="openModal('Usuario 1', '12345678', 'usuario1@ejemplo.com', 'imagen.jpg')">
-        <span class="user-name"
-            (click)="openModal('Usuario 1', '12345678', 'usuario1@ejemplo.com', 'imagen.jpg')">Usuario 1</span>
-        <div class="user-actions">
-            <div class="dropdown">
-                <button class="dropbtn">Asignar Rol</button>
-                <div class="dropdown-content">
-                    <a (click)="assignRole('Usuario 1', 'Admin')">Administrador</a>
-                    <a (click)="assignRole('Usuario 1', 'Editor')">Moderador</a>
-                    <a (click)="assignRole('Usuario 1', 'Viewer')">Visitante</a>
-                    <a (click)="assignRole('Usuario 1', 'Viewer')">Seguridad</a>
-                </div>
-            </div>
-            <button class="status-btn" (click)="toggleStatus($event.target)">Activo</button>
-        </div>
-    </div>
-
-
-    <div class="user-item"
-        (click)="openModal('Usuario 3', '87654321', 'usuario3@ejemplo.com', 'https://via.placeholder.com/80')">
-        <img src="imagen.jpg" alt="Foto de Usuario" class="user-photo">
-        <span class="user-name">Usuario 3</span>
-        <div class="user-actions">
-            <div class="dropdown">
-                <button class="dropbtn">Asignar Rol</button>
-                <div class="dropdown-content">
-                    <a (click)="assignRole('Usuario 1', 'Admin')">Administrador</a>
-                    <a (click)="assignRole('Usuario 1', 'Editor')">Moderador</a>
-                    <a (click)="assignRole('Usuario 1', 'Viewer')">Visitante</a>
-                    <a (click)="assignRole('Usuario 1', 'Viewer')">Seguridad</a>
-                </div>
-            </div>
-            <button class="status-btn" (click)="toggleStatus($event.target)">Activo</button>
-        </div>
-    </div>
-
-    <div class="user-item"
-        (click)="openModal('Usuario 4', '87654321', 'usuario4@ejemplo.com', 'https://via.placeholder.com/80')">
-        <img src="imagen.jpg" alt="Foto de Usuario" class="user-photo">
-        <span class="user-name">Usuario 4</span>
-        <div class="user-actions">
-            <div class="dropdown">
-                <button class="dropbtn">Asignar Rol</button>
-                <div class="dropdown-content">
-                    <a (click)="assignRole('Usuario 1', 'Admin')">Administrador</a>
-                    <a (click)="assignRole('Usuario 1', 'Editor')">Moderador</a>
-                    <a (click)="assignRole('Usuario 1', 'Viewer')">Visitante</a>
-                    <a (click)="assignRole('Usuario 1', 'Viewer')">Seguridad</a>
-                </div>
-            </div>
-            <button class="status-btn" (click)="toggleStatus($event.target)">Activo</button>
-        </div>
-    </div>
-
 </div>
 
 <div id="userModal" class="modal">
